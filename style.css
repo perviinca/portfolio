@@ -1,4 +1,3 @@
-/* --- RESET E VARIABILI (ROOT) --- */
 :root {
 	--violet: #8b7db8;
 	--navy: #3f4e78;
@@ -25,7 +24,7 @@ body {
 	padding-top: 88px; /* Altezza Navbar */
 }
 
-/* --- TIPOGRAFIA --- */
+/* --- typo --- */
 h1,
 h2,
 h3 {
@@ -42,7 +41,7 @@ h3 {
 	color: var(--violet) !important;
 }
 
-/* --- NAVBAR E MENU --- */
+/* ---nav bar --- */
 .custom-nav {
 	height: 88px;
 	background-color: var(--off-white) !important;
@@ -358,4 +357,107 @@ h3 {
 
 .bg-pervinca-light {
 	background-color: #d4caf2 !important;
+}
+
+/* Card Progetto */
+.project-card {
+	background-color: #ffffff;
+	border: 1px solid var(--navy);
+	border-radius: 30px;
+	padding: 30px;
+	height: 100%;
+	transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+/* Tag Pillole */
+.tag-pill {
+	padding: 6px 16px;
+	border-radius: var(--radius-pill);
+	border: 1px solid var(--navy);
+	font-family: "Fredoka", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/* Varianti Colore Tag */
+.tag-sky {
+	background-color: var(--sky);
+}
+.tag-rose {
+	background-color: var(--rose);
+}
+.tag-butter {
+	background-color: var(--butter);
+}
+.tag-white {
+	background-color: #ffffff;
+}
+
+/* Contenitore Immagine */
+.project-img-container img {
+	width: 100%;
+	border: 1px solid rgba(63, 78, 120, 0.1);
+}
+
+/* Bottone Case Study (Fredoka) */
+.project-card .btn-navy-pill {
+	font-family: "Fredoka", sans-serif;
+	font-size: 0.9rem;
+}
+
+/* --- CTA BOX AZZURRO --- */
+.cta-contact-box {
+	background-color: var(--sky);
+	border-radius: 40px;
+	padding: 110px 40px; /* Altezza generosa come richiesto */
+	transition: transform 0.3s ease;
+}
+
+.cta-contact-box h2 {
+	font-family: "Fredoka", sans-serif;
+	color: var(--navy) !important; /* Testo sempre Navy */
+	margin: 0;
+	transition: transform 0.3s ease; /* Per l'ingrandimento del testo */
+}
+
+.cta-contact-box:hover h2 {
+	transform: scale(1.08); /* Il testo aumenta di dimensione come richiesto */
+}
+
+/* --- FOOTER --- */
+.footer-bg {
+	background-color: var(--off-white);
+	padding-top: 60px;
+}
+
+.footer-links li {
+	margin-bottom: 12px;
+}
+
+.footer-links a {
+	font-family: "Fredoka", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--navy);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.footer-links a:hover {
+	color: var(--violet);
+}
+
+/* Responsività per la CTA su Mobile */
+@media (max-width: 768px) {
+	.cta-contact-box {
+		padding: 60px 20px;
+	}
+	.cta-contact-box h2 {
+		font-size: 1.8rem;
+	}
 }
