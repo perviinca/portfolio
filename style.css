@@ -398,38 +398,34 @@ h3 {
 	background-color: #ffffff;
 }
 
-/* Contenitore Immagine */
 .project-img-container img {
 	width: 100%;
 	border: 1px solid rgba(63, 78, 120, 0.1);
 }
 
-/* Bottone Case Study (Fredoka) */
 .project-card .btn-navy-pill {
 	font-family: "Fredoka", sans-serif;
 	font-size: 0.9rem;
 }
 
-/* --- CTA BOX AZZURRO --- */
 .cta-contact-box {
 	background-color: var(--sky);
 	border-radius: 40px;
-	padding: 110px 40px; /* Altezza generosa come richiesto */
+	padding: 110px 40px;
 	transition: transform 0.3s ease;
 }
 
 .cta-contact-box h2 {
 	font-family: "Fredoka", sans-serif;
-	color: var(--navy) !important; /* Testo sempre Navy */
+	color: var(--navy) !important;
 	margin: 0;
-	transition: transform 0.3s ease; /* Per l'ingrandimento del testo */
+	transition: transform 0.3s ease;
 }
 
 .cta-contact-box:hover h2 {
-	transform: scale(1.08); /* Il testo aumenta di dimensione come richiesto */
+	transform: scale(1.08);
 }
 
-/* --- FOOTER --- */
 .footer-bg {
 	background-color: var(--off-white);
 	padding-top: 60px;
@@ -459,5 +455,144 @@ h3 {
 	}
 	.cta-contact-box h2 {
 		font-size: 1.8rem;
+	}
+}
+
+/* ---  ABOUT --- */
+
+.hero-title-about {
+	font-family: "Fredoka", sans-serif !important;
+	font-weight: 700;
+	font-size: clamp(4rem, 12vw, 10rem);
+	color: var(--navy);
+	line-height: 0.9;
+	margin-bottom: 96px;
+}
+
+.about-text {
+	font-family: "Nunito", sans-serif !important;
+	font-size: 2rem;
+	color: var(--ink);
+	line-height: 1.5;
+	text-align: center;
+}
+
+.about-text .fw-bold {
+	font-weight: 800 !important;
+}
+
+.about-text .text-violet {
+	color: var(--violet) !important;
+}
+
+.photo-circle {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid var(--violet);
+}
+
+.photo-circle img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#about-details h2 {
+	font-size: 2.2rem;
+	line-height: 1.2;
+}
+
+#about-details p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+/* Responsività per schermi piccoli */
+@media (max-width: 768px) {
+	.photo-circle {
+		width: 200px;
+		height: 200px;
+		margin-top: 50px;
+	}
+	#about-details {
+		text-align: center;
+	}
+}
+
+#skills h2 {
+	font-size: clamp(4rem, 8vw, 7rem);
+	margin-top: -10px;
+}
+
+#skills h3 {
+	font-family: "Fredoka", sans-serif;
+	font-size: 1.5rem;
+}
+
+#skills p {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+
+.bg-off-white {
+	background-color: var(--off-white) !important;
+}
+
+.tool-card {
+	width: 80px; /* Dimensione non troppo grande come richiesto */
+	height: 80px;
+	background-color: white;
+	border: 1px solid rgba(63, 78, 120, 0.1); /* Bordino leggero */
+	border-radius: 20px; /* Angoli arrotondati */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	transition: transform 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombra leggera per profondità */
+}
+
+.tool-card:hover {
+	transform: translateY(-5px); /* Effetto hover dinamico */
+}
+
+.tool-card img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+#tools h2 {
+	line-height: 1;
+}
+
+.tool-slider {
+	width: 100%;
+	overflow: hidden; /* Nasconde i loghi che escono dai bordi */
+	padding: 40px 0;
+	position: relative;
+}
+
+.tool-track {
+	display: flex;
+	gap: 40px; /* Spazio tra le card */
+	width: max-content; /* Permette al nastro di essere più lungo dello schermo */
+	animation: scroll-loop 30s linear infinite; /* 30s per un movimento lento */
+}
+
+.tool-track:hover {
+	animation-play-state: paused;
+}
+
+@keyframes scroll-loop {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		/* Si sposta esattamente della metà (perché abbiamo raddoppiato i loghi) */
+		transform: translateX(-50%);
 	}
 }
