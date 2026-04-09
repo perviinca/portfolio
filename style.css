@@ -1,0 +1,598 @@
+:root {
+	--violet: #8b7db8;
+	--navy: #3f4e78;
+	--ink: #23242e;
+	--rose: #e97fa8;
+	--sky: #a8c5e8;
+	--off-white: #f8f6fa;
+	--butter: #ffd49d;
+	--lilac-tint: #c8b8e8;
+	--pervinca-light: #d4caf2;
+
+	--radius-pill: 9999px;
+	--radius-card: 20px;
+
+	--base-space: 8px;
+	--space-2: calc(var(--base-space) * 2); /* 16px */
+	--space-3: calc(var(--base-space) * 3); /* 24px */
+}
+
+body {
+	background-color: var(--off-white);
+	color: var(--ink);
+	font-family: "Nunito", sans-serif;
+	padding-top: 88px; /* Altezza Navbar */
+}
+
+/* --- typo --- */
+h1,
+h2,
+h3 {
+	font-family: "Fredoka", sans-serif;
+	font-weight: 700;
+}
+
+.caption-kawaii {
+	font-family: "Gaegu", cursive !important;
+	color: var(--navy);
+}
+
+.text-violet {
+	color: var(--violet) !important;
+}
+
+/* ---nav bar --- */
+.custom-nav {
+	height: 88px;
+	background-color: var(--off-white) !important;
+	border: none;
+}
+
+.nav-link {
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	color: var(--navy) !important;
+}
+
+.btn-menu-custom {
+	background-color: var(--violet);
+	color: white;
+	border: none;
+	padding: 8px 24px;
+	border-radius: var(--radius-pill);
+	font-family: "Fredoka", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: transform 0.2s;
+}
+
+.btn-menu-custom:hover {
+	transform: scale(1.05);
+	background-color: var(--navy);
+}
+
+.offcanvas {
+	background-color: var(--violet) !important;
+	border-radius: 30px;
+	width: 350px !important;
+	padding: 20px;
+	margin: 20px;
+	height: calc(100% - 40px);
+}
+
+.offcanvas .nav-link {
+	font-family: "Fredoka", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--off-white) !important;
+	padding: 20px 0;
+}
+
+.offcanvas .nav-item {
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.offcanvas .nav-item:last-child {
+	border-bottom: none;
+}
+
+.btn-close {
+	filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* --- HERO SECTION --- */
+#hero {
+	min-height: 80vh;
+	background-image: url(/assets/pattern.svg);
+	background-repeat: repeat;
+	background-size: 1200px;
+	background-color: var(--off-white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-title {
+	font-family: "Fredoka", sans-serif !important;
+	font-weight: 700;
+	font-size: clamp(5rem, 15vw, 12rem);
+	color: var(--navy);
+	line-height: 0.9;
+	letter-spacing: -2px;
+}
+
+.tagline-gaegu {
+	font-family: "Gaegu", cursive !important;
+	font-size: 3rem;
+	font-weight: 700;
+	color: var(--navy);
+}
+
+.dot {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.bg-sky {
+	background-color: var(--sky);
+}
+.bg-rose {
+	background-color: var(--rose);
+}
+.bg-butter {
+	background-color: var(--butter);
+}
+
+/* --- DIVIDER --- */
+.divider-container {
+	width: 100%;
+	height: 144px; /* L'altezza che hai impostato tu */
+
+	/* Applichiamo l'SVG come maschera */
+	-webkit-mask-image: url(/assets/divider-full.svg);
+	mask-image: url(/assets/divider-full.svg);
+	-webkit-mask-repeat: repeat-x;
+	mask-repeat: repeat-x;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+
+	position: relative;
+	z-index: 10;
+
+	/* TRUCCO: lo spostiamo in alto della sua metà per l'effetto semicerchio */
+	margin-top: -72px;
+	margin-bottom: -72px;
+}
+
+.bg-pervinca-light {
+	background-color: #d4caf2 !important;
+}
+.bg-ink {
+	background-color: var(--ink) !important;
+}
+
+/* --- SEZIONE VALORI --- */
+#values {
+	background-color: #d4caf2;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+#values h3 {
+	font-size: 2rem;
+	color: var(--navy);
+	line-height: 1.1;
+}
+
+#values p {
+	font-size: 1.2rem;
+	max-width: 320px;
+	margin: 0 auto;
+	color: var(--navy);
+}
+
+.value-illustration {
+	max-height: 250px;
+	width: auto;
+	margin-bottom: 2rem;
+	transition: transform 0.3s;
+}
+
+.value-illustration:hover {
+	transform: translateY(-10px);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+	.hero-title {
+		font-size: 4.5rem !important;
+		margin-top: 20px;
+	}
+
+	.tagline-gaegu {
+		font-size: 1.4rem !important;
+		gap: 1px;
+	}
+
+	.dot {
+		width: 12px;
+		height: 12px;
+	}
+}
+
+.cta-box {
+	background-color: var(--off-white);
+	border: 2px solid var(--navy);
+	border-radius: 20px; /* Come le tue card */
+	padding: 40px 60px;
+	margin-top: 80px; /* Spazio dalle illustrazioni sopra */
+}
+
+.cta-text h2 {
+	font-family: "Fredoka", sans-serif;
+	font-weight: 700;
+	color: var(--navy);
+	line-height: 1.2;
+}
+
+.btn-navy-pill {
+	background-color: var(--navy) !important;
+	color: var(--off-white) !important;
+	border-radius: var(--radius-pill) !important;
+	padding: 12px 30px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	transition: transform 0.2s;
+	display: inline-block;
+}
+
+.btn-navy-pill:hover {
+	background-color: var(--violet) !important;
+	transform: scale(1.05);
+}
+
+.divider-ink img {
+	filter: brightness(0.15); /* Approssima il colore #23242e */
+}
+
+#services h2.display-3 {
+	font-family: "Fredoka", sans-serif !important;
+	font-weight: 700;
+	/* 120pt sono circa 160px. Usiamo clamp per farlo scalare tra 80px e 160px */
+	font-size: clamp(5rem, 10vw, 10rem) !important;
+	color: var(--butter) !important;
+	line-height: 1.1;
+	margin-bottom: 2rem;
+}
+
+/* Colore Butter per il titolo */
+.text-butter {
+	color: var(--butter) !important;
+}
+
+#services h2 {
+	font-family: "Fredoka", sans-serif;
+}
+
+/* Responsività per mobile */
+@media (max-width: 768px) {
+	.cta-box {
+		padding: 30px;
+		text-align: center;
+		justify-content: center !important;
+	}
+}
+
+.custom-accordion .accordion-item {
+	border: 2px solid var(--ink) !important;
+	border-radius: 20px !important;
+	overflow: hidden;
+	margin-bottom: 24px; /* Spazio tra le card */
+}
+
+.custom-accordion .accordion-button::after {
+	background-image: none !important;
+	content: "+";
+	font-family: "Fredoka", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	color: var(--ink);
+	transition: transform 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* l'accordion è APERTO  */
+.custom-accordion .accordion-button:not(.collapsed)::after {
+	transform: rotate(45deg);
+	color: var(--ink);
+}
+
+.custom-accordion .accordion-button:focus {
+	box-shadow: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+	color: var(--ink);
+	background-color: transparent; /* Mantiene il colore della card */
+}
+
+/* Colori delle card */
+.bg-off-white {
+	background-color: var(--off-white) !important;
+}
+.bg-rose {
+	background-color: var(--rose) !important;
+}
+.bg-sky {
+	background-color: var(--sky) !important;
+}
+
+/* Testi interni */
+.accordion-content-text {
+	text-align: left;
+}
+
+.font-fredoka {
+	font-family: "Fredoka", sans-serif !important;
+}
+
+.font-nunito {
+	font-family: "Nunito", sans-serif !important;
+}
+
+.hero-title-projects {
+	font-family: "Fredoka", sans-serif !important;
+	font-weight: 700;
+	font-size: clamp(5rem, 12vw, 10rem) !important;
+	color: var(--ink);
+	line-height: 0.9;
+	letter-spacing: -2px;
+}
+
+.bg-pervinca-light {
+	background-color: #d4caf2 !important;
+}
+
+/* Card Progetto */
+.project-card {
+	background-color: #ffffff;
+	border: 1px solid var(--navy);
+	border-radius: 30px;
+	padding: 30px;
+	height: 100%;
+	transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+/* Tag Pillole */
+.tag-pill {
+	padding: 6px 16px;
+	border-radius: var(--radius-pill);
+	border: 1px solid var(--navy);
+	font-family: "Fredoka", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/* Varianti Colore Tag */
+.tag-sky {
+	background-color: var(--sky);
+}
+.tag-rose {
+	background-color: var(--rose);
+}
+.tag-butter {
+	background-color: var(--butter);
+}
+.tag-white {
+	background-color: #ffffff;
+}
+
+.project-img-container img {
+	width: 100%;
+	border: 1px solid rgba(63, 78, 120, 0.1);
+}
+
+.project-card .btn-navy-pill {
+	font-family: "Fredoka", sans-serif;
+	font-size: 0.9rem;
+}
+
+.cta-contact-box {
+	background-color: var(--sky);
+	border-radius: 40px;
+	padding: 110px 40px;
+	transition: transform 0.3s ease;
+}
+
+.cta-contact-box h2 {
+	font-family: "Fredoka", sans-serif;
+	color: var(--navy) !important;
+	margin: 0;
+	transition: transform 0.3s ease;
+}
+
+.cta-contact-box:hover h2 {
+	transform: scale(1.08);
+}
+
+.footer-bg {
+	background-color: var(--off-white);
+	padding-top: 60px;
+}
+
+.footer-links li {
+	margin-bottom: 12px;
+}
+
+.footer-links a {
+	font-family: "Fredoka", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--navy);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.footer-links a:hover {
+	color: var(--violet);
+}
+
+/* Responsività per la CTA su Mobile */
+@media (max-width: 768px) {
+	.cta-contact-box {
+		padding: 60px 20px;
+	}
+	.cta-contact-box h2 {
+		font-size: 1.8rem;
+	}
+}
+
+/* ---  ABOUT --- */
+
+.hero-title-about {
+	font-family: "Fredoka", sans-serif !important;
+	font-weight: 700;
+	font-size: clamp(4rem, 12vw, 10rem);
+	color: var(--navy);
+	line-height: 0.9;
+	margin-bottom: 96px;
+}
+
+.about-text {
+	font-family: "Nunito", sans-serif !important;
+	font-size: 2rem;
+	color: var(--ink);
+	line-height: 1.5;
+	text-align: center;
+}
+
+.about-text .fw-bold {
+	font-weight: 800 !important;
+}
+
+.about-text .text-violet {
+	color: var(--violet) !important;
+}
+
+.photo-circle {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid var(--violet);
+}
+
+.photo-circle img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#about-details h2 {
+	font-size: 2.2rem;
+	line-height: 1.2;
+}
+
+#about-details p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+/* Responsività per schermi piccoli */
+@media (max-width: 768px) {
+	.photo-circle {
+		width: 200px;
+		height: 200px;
+		margin-top: 50px;
+	}
+	#about-details {
+		text-align: center;
+	}
+}
+
+#skills h2 {
+	font-size: clamp(4rem, 8vw, 7rem);
+	margin-top: -10px;
+}
+
+#skills h3 {
+	font-family: "Fredoka", sans-serif;
+	font-size: 1.5rem;
+}
+
+#skills p {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+
+.bg-off-white {
+	background-color: var(--off-white) !important;
+}
+
+.tool-card {
+	width: 80px; /* Dimensione non troppo grande come richiesto */
+	height: 80px;
+	background-color: white;
+	border: 1px solid rgba(63, 78, 120, 0.1); /* Bordino leggero */
+	border-radius: 20px; /* Angoli arrotondati */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	transition: transform 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombra leggera per profondità */
+}
+
+.tool-card:hover {
+	transform: translateY(-5px); /* Effetto hover dinamico */
+}
+
+.tool-card img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+#tools h2 {
+	line-height: 1;
+}
+
+.tool-slider {
+	width: 100%;
+	overflow: hidden; /* Nasconde i loghi che escono dai bordi */
+	padding: 40px 0;
+	position: relative;
+}
+
+.tool-track {
+	display: flex;
+	gap: 40px; /* Spazio tra le card */
+	width: max-content; /* Permette al nastro di essere più lungo dello schermo */
+	animation: scroll-loop 30s linear infinite; /* 30s per un movimento lento */
+}
+
+.tool-track:hover {
+	animation-play-state: paused;
+}
+
+@keyframes scroll-loop {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		/* Si sposta esattamente della metà (perché abbiamo raddoppiato i loghi) */
+		transform: translateX(-50%);
+	}
+}
