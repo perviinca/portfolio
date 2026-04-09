@@ -70,6 +70,7 @@ h3 {
 .btn-menu-custom:hover {
 	transform: scale(1.05);
 	background-color: var(--navy);
+	color: var(--off-white);
 }
 
 .offcanvas {
@@ -85,8 +86,14 @@ h3 {
 	font-family: "Fredoka", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 700;
-	color: var(--off-white) !important;
+	color: white !important;
 	padding: 20px 0;
+}
+
+.offcanvas .nav-link:hover {
+	transform: translateX(10px);
+	color: var(--off-white) !important;
+	font-weight: 700;
 }
 
 .offcanvas .nav-item {
@@ -398,34 +405,38 @@ h3 {
 	background-color: #ffffff;
 }
 
+/* Contenitore Immagine */
 .project-img-container img {
 	width: 100%;
 	border: 1px solid rgba(63, 78, 120, 0.1);
 }
 
+/* Bottone Case Study (Fredoka) */
 .project-card .btn-navy-pill {
 	font-family: "Fredoka", sans-serif;
 	font-size: 0.9rem;
 }
 
+/* --- CTA BOX AZZURRO --- */
 .cta-contact-box {
 	background-color: var(--sky);
 	border-radius: 40px;
-	padding: 110px 40px;
+	padding: 110px 40px; /* Altezza generosa come richiesto */
 	transition: transform 0.3s ease;
 }
 
 .cta-contact-box h2 {
 	font-family: "Fredoka", sans-serif;
-	color: var(--navy) !important;
+	color: var(--navy) !important; /* Testo sempre Navy */
 	margin: 0;
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease; /* Per l'ingrandimento del testo */
 }
 
 .cta-contact-box:hover h2 {
-	transform: scale(1.08);
+	transform: scale(1.08); /* Il testo aumenta di dimensione come richiesto */
 }
 
+/* --- FOOTER --- */
 .footer-bg {
 	background-color: var(--off-white);
 	padding-top: 60px;
@@ -457,7 +468,6 @@ h3 {
 		font-size: 1.8rem;
 	}
 }
-
 /* ---  ABOUT --- */
 
 .hero-title-about {
@@ -595,4 +605,232 @@ h3 {
 		/* Si sposta esattamente della metà (perché abbiamo raddoppiato i loghi) */
 		transform: translateX(-50%);
 	}
+}
+
+/* --- PAGINA CONTATTI --- */
+
+.contact-form {
+	font-family: "Nunito", sans-serif; /* Applicato a tutto il form */
+}
+
+.contact-cat {
+	max-width: 80%; /* Regola qui la dimensione dell'immagine */
+	height: auto;
+}
+
+/* Label del form */
+.contact-form .form-label {
+	font-weight: 700;
+	color: var(--ink);
+	margin-bottom: 0;
+}
+
+/* Pillole Custom */
+.btn-pill-custom {
+	border-radius: var(--radius-pill);
+	border: none;
+	background-color: var(--off-white); /* Default: Off-white */
+	color: var(--ink);
+	padding: 8px 20px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.btn-pill-custom:hover {
+	background-color: var(--pervinca-light); /* Hover un po' più scuro/lilla */
+	color: var(--ink);
+}
+
+.btn-check:checked + .btn-pill-custom {
+	background-color: var(--navy) !important; /* Selected: Navy */
+	color: white !important;
+}
+
+/* Textarea: sistemiamo l'altezza minima */
+textarea.custom-input {
+	min-height: 40px;
+	resize: none;
+}
+
+/* --- SEZIONE CONTATTI COMPLETA --- */
+
+.contact-section {
+	background-color: #d4caf2; /* Colore lilla di sfondo */
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.contact-title {
+	font-family: "Fredoka", sans-serif;
+	font-weight: 600;
+	color: var(--ink);
+	font-size: clamp(2rem, 5vw, 3rem);
+	line-height: 1.2;
+}
+
+.contact-form {
+	font-family: "Nunito", sans-serif;
+}
+
+.custom-input {
+	width: 100%;
+	background: transparent !important;
+	border: none;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+	padding: 10px 0;
+	color: var(--ink);
+	outline: none;
+	transition: all 0.3s ease;
+	border-radius: 0;
+}
+
+.custom-input:focus {
+	border-bottom-color: var(--ink); /* La linea diventa scura quando scrivi */
+	box-shadow: none; /* Toglie l'alone blu di Bootstrap */
+}
+
+/* Label del form */
+.contact-form .form-label {
+	font-weight: 700;
+	color: var(--ink);
+	margin-top: 10px;
+	display: block;
+}
+
+/* Pillole Custom - Stati corretti */
+.btn-pill-custom {
+	border-radius: var(--radius-pill);
+	border: none;
+	background-color: var(--off-white) !important; /* Forza il colore di partenza */
+	color: var(--ink) !important;
+	padding: 8px 24px;
+	font-weight: 700;
+	transition: all 0.3s ease;
+}
+
+/* Hover: Deve diventare Navy con testo chiaro */
+.btn-pill-custom:hover {
+	background-color: var(--navy) !important;
+	color: var(--off-white) !important;
+	transform: translateY(-2px); /* Un piccolo tocco di dinamismo extra */
+}
+
+/* Selected/Checked: Rimane Navy */
+.btn-check:checked + .btn-pill-custom {
+	background-color: var(--navy) !important;
+	color: var(--off-white) !important;
+}
+
+.btn-submit {
+	background-color: var(--ink);
+	color: white;
+	border: none;
+	padding: 16px;
+	border-radius: 12px;
+	width: 100%;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+	opacity: 0.9;
+}
+
+.contact-cat {
+	max-width: 350px;
+	height: auto;
+}
+
+.divider-container-flipped {
+	width: 100%;
+	height: 144px;
+
+	-webkit-mask-image: url(./assets/divider-full.svg);
+	mask-image: url(./assets/divider-full.svg);
+	-webkit-mask-repeat: repeat-x;
+	mask-repeat: repeat-x;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+
+	transform: rotate(180deg);
+	position: relative;
+	z-index: 10;
+	margin-top: -1px;
+	margin-bottom: -72px;
+}
+
+.cv-section {
+	background-color: var(--off-white);
+	padding-top: 120px !important;
+}
+
+.border-pervinca {
+	border-color: var(--pervinca-light) !important;
+}
+
+.profile-img-cv {
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.profile-img-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 992px) {
+	.border-start-custom {
+		border-left: 2px dashed var(--pervinca-light);
+	}
+}
+
+.badge-skill {
+	background-color: var(--navy) !important;
+	color: white !important;
+	border-radius: var(--radius-pill);
+	padding: 10px 18px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.badge-creative-skill {
+	background-color: var(--rose) !important;
+	color: white !important;
+	border-radius: var(--radius-pill);
+	padding: 10px 18px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.badge-skill:hover {
+	transform: scale(1.1) rotate(3deg);
+	background-color: var(--violet) !important;
+}
+
+.badge-creative-skill:hover {
+	transform: scale(1.1) rotate(3deg);
+	background-color: var(--violet) !important;
+}
+
+/* Lingue con effetto */
+.lang-item {
+	padding: 8px 0;
+	transition: all 0.3s ease;
+}
+
+.lang-item:hover {
+	transform: translateX(10px);
+	color: var(--violet);
+	font-weight: 700;
 }
