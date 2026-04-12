@@ -1,0 +1,39 @@
+.footer-bg {
+	background-color: var(--off-white);
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.hero-title {
+	color: #3f4e78;
+
+	.text-violet {
+		color: var(--violet) !important; // Mantiene le 'ii' lilla
+	}
+}
+
+p.font-nunito {
+	color: var(--navy);
+	opacity: 0.8;
+}
+
+.footer-links {
+	list-style: none;
+	padding: 0;
+
+	li {
+		margin-bottom: 12px;
+	}
+
+	a {
+		font-family: "Fredoka", sans-serif;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--navy);
+		text-decoration: none;
+
+		&:hover {
+			color: var(--violet);
+		}
+	}
+}

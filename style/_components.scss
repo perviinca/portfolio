@@ -1,0 +1,272 @@
+.btn-pill-custom {
+	border-radius: var(--radius-pill);
+	border: none;
+	background-color: var(--off-white) !important;
+	color: var(--ink) !important;
+	padding: 8px 24px;
+	font-weight: 700;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: var(--navy) !important;
+		color: var(--off-white) !important;
+		transform: translateY(-2px);
+	}
+}
+
+.btn-check:checked + .btn-pill-custom {
+	background-color: var(--navy) !important;
+	color: white !important;
+}
+
+.btn-submit {
+	background-color: var(--ink);
+	color: white;
+	border: none;
+	padding: 16px;
+	border-radius: 12px;
+	width: 100%;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	transition: opacity 0.2s;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.btn-navy-pill {
+	background-color: var(--navy) !important;
+	color: var(--off-white) !important;
+	border-radius: var(--radius-pill) !important;
+	padding: 12px 30px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+	transition: all 0.2s ease;
+	display: inline-block;
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--violet) !important;
+		transform: scale(1.05);
+	}
+}
+
+.tag-pill {
+	padding: 6px 16px;
+	border-radius: var(--radius-pill);
+	border: 1px solid var(--navy);
+	font-family: "Fredoka", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.dot {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.bg-sky,
+.tag-sky {
+	background-color: var(--sky);
+}
+.bg-rose,
+.tag-rose {
+	background-color: var(--rose);
+}
+.bg-butter,
+.tag-butter {
+	background-color: var(--butter);
+}
+.tag-white {
+	background-color: #ffffff;
+}
+
+.divider-container,
+.divider-container-flipped {
+	width: 100%;
+	height: 144px;
+	-webkit-mask-image: url(./assets/divider-full.svg);
+	mask-image: url(./assets/divider-full.svg);
+	-webkit-mask-repeat: repeat-x;
+	mask-repeat: repeat-x;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	position: relative;
+	z-index: 10;
+
+	@media (max-width: 768px) {
+		height: 114px;
+	}
+}
+
+.divider-container {
+	margin-top: -72px;
+	margin-bottom: -72px;
+}
+
+.divider-container-flipped {
+	transform: rotate(180deg);
+	margin-top: -1px;
+	margin-bottom: -72px;
+}
+
+.divider-ink img {
+	filter: brightness(0.15);
+}
+
+/* --- BADGES SKILLS --- */
+.badge-skill,
+.badge-creative-skill {
+	color: white !important;
+	border-radius: var(--radius-pill);
+	padding: 10px 18px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	transition: all 0.3s ease;
+	cursor: default;
+
+	&:hover {
+		transform: scale(1.1) rotate(3deg);
+		background-color: var(--violet) !important;
+	}
+}
+
+.badge-skill {
+	background-color: var(--navy) !important;
+}
+.badge-creative-skill {
+	background-color: var(--rose) !important;
+}
+
+/* --- CARDS E BOXES --- */
+.project-card {
+	background-color: #ffffff;
+	border: 1px solid var(--navy);
+	border-radius: 30px;
+	padding: 30px;
+	height: 100%;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+
+	.project-img-container img {
+		width: 100%;
+		border: 1px solid rgba(63, 78, 120, 0.1);
+	}
+}
+
+.cta-box {
+	background-color: var(--off-white);
+	border: 2px solid var(--navy);
+	border-radius: 20px;
+	padding: 40px 60px;
+	margin-top: 80px;
+
+	h2 {
+		font-family: "Fredoka", sans-serif;
+		font-weight: 700;
+		color: var(--navy);
+		line-height: 1.2;
+	}
+}
+
+.cta-contact-box {
+	background-color: var(--sky);
+	border-radius: 40px;
+	padding: 110px 40px;
+	transition: transform 0.3s ease;
+
+	h2 {
+		font-family: "Fredoka", sans-serif;
+		color: var(--navy) !important;
+		margin: 0;
+		transition: transform 0.3s ease;
+	}
+
+	&:hover {
+		h2 {
+			transform: scale(1.08);
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 60px 20px;
+		h2 {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+/* --- ACCORDION --- */
+.custom-accordion {
+	.accordion-item {
+		border: 2px solid var(--ink) !important;
+		border-radius: 20px !important;
+		overflow: hidden;
+		margin-bottom: 24px;
+	}
+
+	.accordion-button {
+		&:focus {
+			box-shadow: none;
+		}
+
+		&:not(.collapsed) {
+			color: var(--ink);
+			background-color: transparent;
+			&::after {
+				transform: rotate(45deg);
+			}
+		}
+
+		&::after {
+			background-image: none !important;
+			content: "+";
+			font-family: "Fredoka", sans-serif;
+			font-size: 2.5rem;
+			font-weight: 400;
+			color: var(--ink);
+			transition: transform 0.3s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.accordion-content-text {
+		text-align: left;
+	}
+}
+
+/* --- TOOLS CARDS --- */
+.tool-card {
+	width: 80px;
+	height: 80px;
+	background-color: white;
+	border: 1px solid rgba(63, 78, 120, 0.1);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	transition: transform 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+}

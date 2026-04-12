@@ -1,0 +1,55 @@
+.contact-section {
+	background-color: #d4caf2;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: 60px 0;
+
+	.contact-title {
+		font-family: "Fredoka", sans-serif;
+		font-weight: 600;
+		color: var(--ink);
+		font-size: clamp(2rem, 5vw, 3rem);
+		line-height: 1.2;
+	}
+
+	.contact-cat {
+		max-width: 350px;
+		width: 80%;
+		height: auto;
+	}
+
+	.contact-form {
+		font-family: "Nunito", sans-serif;
+
+		.form-label {
+			font-weight: 700;
+			color: var(--ink);
+			margin-top: 10px;
+			display: block;
+			margin-bottom: 0;
+		}
+
+		.custom-input {
+			width: 100%;
+			background: transparent !important;
+			border: none;
+			border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+			padding: 10px 0;
+			color: var(--ink);
+			outline: none;
+			transition: all 0.3s ease;
+			border-radius: 0;
+
+			&:focus {
+				border-bottom-color: var(--ink);
+				box-shadow: none;
+			}
+		}
+
+		textarea.custom-input {
+			min-height: 40px;
+			resize: none;
+		}
+	}
+}

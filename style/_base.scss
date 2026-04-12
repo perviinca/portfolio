@@ -1,0 +1,50 @@
+body {
+	background-color: var(--off-white);
+	color: var(--ink);
+	font-family: "Nunito", sans-serif;
+	padding-top: 88px;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Fredoka", sans-serif;
+	font-weight: 700;
+}
+
+.caption-kawaii {
+	font-family: "Gaegu", cursive !important;
+	color: var(--navy);
+}
+
+.text-violet {
+	color: var(--violet) !important;
+}
+
+.text-butter {
+	color: var(--butter) !important;
+}
+
+.font-fredoka {
+	font-family: "Fredoka", sans-serif !important;
+}
+.font-nunito {
+	font-family: "Nunito", sans-serif !important;
+}
+
+.bg-off-white {
+	background-color: var(--off-white) !important;
+}
+.bg-rose {
+	background-color: var(--rose) !important;
+}
+.bg-sky {
+	background-color: var(--sky) !important;
+}
+.bg-pervinca-light {
+	background-color: #d4caf2 !important;
+}
+
+.bg-ink {
+	background-color: var(--ink) !important;
+}
