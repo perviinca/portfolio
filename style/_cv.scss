@@ -1,0 +1,39 @@
+.cv-section {
+	background-color: var(--off-white);
+	padding-top: 120px !important;
+
+	.profile-img-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.profile-img-cv {
+			width: 180px;
+			height: 180px;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 50%;
+		}
+	}
+
+	.lang-item {
+		padding: 8px 0;
+		transition: all 0.3s ease;
+
+		&:hover {
+			transform: translateX(10px);
+			color: var(--violet);
+			font-weight: 700;
+		}
+	}
+
+	.border-pervinca {
+		border-color: var(--pervinca-light) !important;
+	}
+
+	@media (min-width: 992px) {
+		.border-start-custom {
+			border-left: 2px dashed var(--pervinca-light);
+		}
+	}
+}
