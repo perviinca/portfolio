@@ -86,8 +86,8 @@ h3 {
 }
 
 .btn-menu-custom {
-  background-color: var(--violet);
-  color: white;
+  background-color: #d4caf2;
+  color: var(--ink);
   border: none;
   padding: 8px 24px;
   border-radius: var(--radius-pill);
@@ -266,7 +266,6 @@ h3 {
   filter: brightness(0.15);
 }
 
-/* --- BADGES SKILLS --- */
 .badge-skill,
 .badge-creative-skill {
   color: white !important;
@@ -291,7 +290,6 @@ h3 {
   background-color: var(--rose) !important;
 }
 
-/* --- CARDS E BOXES --- */
 .project-card {
   background-color: #ffffff;
   border: 1px solid var(--navy);
@@ -346,7 +344,6 @@ h3 {
   }
 }
 
-/* --- ACCORDION --- */
 .custom-accordion .accordion-item {
   border: 2px solid var(--ink) !important;
   border-radius: 20px !important;
@@ -379,7 +376,6 @@ h3 {
   text-align: left;
 }
 
-/* --- TOOLS CARDS --- */
 .tool-card {
   width: 80px;
   height: 80px;
@@ -417,7 +413,7 @@ h3 {
 }
 
 p.font-nunito {
-  color: var(--navy);
+  color: #23242e;
   opacity: 0.8;
 }
 
@@ -496,7 +492,7 @@ p.font-nunito {
   font-size: 1.2rem;
   max-width: 320px;
   margin: 0 auto;
-  color: var(--navy);
+  color: var(--ink);
 }
 #values .value-illustration {
   max-height: 250px;
