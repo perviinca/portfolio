@@ -63,7 +63,7 @@ h3 {
 }
 
 .bg-pervinca-light {
-  background-color: #d4caf2 !important;
+  background-color: var(--pervinca-light) !important;
 }
 
 .bg-ink {
@@ -86,7 +86,7 @@ h3 {
 }
 
 .btn-menu-custom {
-  background-color: #d4caf2;
+  background-color: var(--pervinca-light);
   color: var(--ink);
   border: none;
   padding: 8px 24px;
@@ -291,7 +291,7 @@ h3 {
 }
 
 .project-card {
-  background-color: #ffffff;
+  background-color: var(--off-white);
   border: 1px solid var(--navy);
   border-radius: 30px;
   padding: 30px;
@@ -406,14 +406,14 @@ h3 {
 }
 
 .hero-title {
-  color: #3f4e78;
+  color: var(--navy);
 }
 .hero-title .text-violet {
   color: var(--violet) !important;
 }
 
 p.font-nunito {
-  color: #23242e;
+  color: var(--ink);
   opacity: 0.8;
 }
 
@@ -479,7 +479,7 @@ p.font-nunito {
 }
 
 #values {
-  background-color: #d4caf2;
+  background-color: var(--pervinca-light);
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -510,7 +510,7 @@ p.font-nunito {
 }
 
 #services {
-  background-color: #23242e;
+  background-color: var(--ink);
   padding-top: 144px;
   padding-bottom: 144px;
 }
@@ -672,7 +672,7 @@ p.font-nunito {
 }
 
 .contact-section {
-  background-color: #d4caf2;
+  background-color: var(--pervinca-light);
   min-height: 100vh;
   display: flex;
   align-items: center;
