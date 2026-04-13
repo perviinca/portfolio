@@ -43,7 +43,7 @@
 }
 
 #values {
-	background-color: #d4caf2;
+	background-color: var(--pervinca-light);
 	padding-top: 80px;
 	padding-bottom: 80px;
 
@@ -57,7 +57,7 @@
 		font-size: 1.2rem;
 		max-width: 320px;
 		margin: 0 auto;
-		color: var(--navy);
+		color: var(--ink);
 	}
 
 	.value-illustration {
@@ -77,7 +77,7 @@
 }
 
 #services {
-	background-color: #23242e;
+	background-color: var(--ink);
 	padding-top: 144px;
 	padding-bottom: 144px;
 

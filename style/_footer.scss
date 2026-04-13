@@ -5,15 +5,15 @@
 }
 
 .hero-title {
-	color: #3f4e78;
+	color: var(--navy);
 
 	.text-violet {
-		color: var(--violet) !important; // Mantiene le 'ii' lilla
+		color: var(--violet) !important;
 	}
 }
 
 p.font-nunito {
-	color: var(--navy);
+	color: var(--ink);
 	opacity: 0.8;
 }
 
